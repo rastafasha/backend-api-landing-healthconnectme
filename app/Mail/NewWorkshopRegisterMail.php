@@ -30,8 +30,8 @@ class NewWorkshopRegisterMail extends Mailable
      */
     public function build()
     {
-        return $this->from('soporte@tu-managerdigital.com', 'Sistema Automatizado de Envio de Notificaciones por correo')
-            ->subject('Registro de un nuevo usuario para el workshop')
+        return $this->from('registro@health-connect.me', 'Sistema de Registro desde Health-connect.me')
+            ->subject('Registro de un nuevo usuario para Health-connect.me')
             ->markdown('emails.admin.new_workshop_register' , ['workshop' => $this->workshop]);
     }
 }

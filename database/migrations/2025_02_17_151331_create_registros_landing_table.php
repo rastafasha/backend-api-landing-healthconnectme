@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\Doctor;
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Models\RegistroL;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class CreateDoctorTable extends Migration
+class CreateRegistrosLandingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateDoctorTable extends Migration
      */
     public function up()
     {
-        Schema::create('doctors', function (Blueprint $table) {
+        Schema::create('registros_landing', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->string('apellido');
@@ -29,13 +29,11 @@ class CreateDoctorTable extends Migration
             $table->string('dondeSeEntero');
             $table->string('image')->nullable();
             
-            $table->enum('status', [Doctor::APPROVED, Doctor::PENDING, Doctor::REJECTED])->default(Doctor::PENDING);
+            $table->enum('status', [RegistroL::APPROVED, RegistroL::PENDING, RegistroL::REJECTED])->default(RegistroL::PENDING);
             // Provider IDs
             $table->unsignedBigInteger('type_id')->nullable();
 
             $table->timestamps();
-
-
         });
     }
 
@@ -46,6 +44,6 @@ class CreateDoctorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doctors');
+        Schema::dropIfExists('registros_landing');
     }
 }

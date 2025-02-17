@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-use App\Jobs\PaymentRegisterJob;
-use App\Mail\NewWorkshopRegisterMail;
-use Illuminate\Support\Facades\Mail;
-
-class Doctor extends Model
+class RegistroL extends Model
 {
     use HasFactory;
+    
+    protected $table = 'registros_landing';
     protected $fillable = [
         'nombre',
         'apellido',
@@ -43,23 +41,6 @@ class Doctor extends Model
     | functions
     |--------------------------------------------------------------------------
     */
-
-    protected static function boot(){
-
-        parent::boot();
-
-        static::created(function($doctor){
-
-            // PaymentRegisterJob::dispatch(
-            //     $user
-            // )->onQueue("high");
-
-        // Mail::to('registro@health-connect.me')->send(new NewWorkshopRegisterMail($doctor));
-
-        });
-
-
-    }
 
 
     /*

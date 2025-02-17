@@ -42,7 +42,10 @@ Route::group(['middleware' => 'api'], function ($router) {
 
    
 
-    // Workshop
+    // Registros desde landing o front
+    require __DIR__ . '/api_routes/registroLanding.php';
+
+    // doctores
     require __DIR__ . '/api_routes/doctor.php';
 
     // users
@@ -50,6 +53,8 @@ Route::group(['middleware' => 'api'], function ($router) {
     
     // profile
     require __DIR__ . '/api_routes/profile.php';
+    // types
+    require __DIR__ . '/api_routes/types.php';
     
     //subcripcion
     require __DIR__ . '/api_routes/subcripcion.php';
@@ -96,11 +101,11 @@ Route::group(['middleware' => 'api'], function ($router) {
 
 
 
-    Route::post('/workshop/store', [workshopController::class, 'workshopStore'])
-        ->name('workshop.store');
+    // Route::post('/workshop/store', [workshopController::class, 'workshopStore'])
+    //     ->name('workshop.store');
 
-        Route::post('/workshop/upload', [workshopController::class, 'upload'])
-        ->name('workshop.upload');
+    //     Route::post('/workshop/upload', [workshopController::class, 'upload'])
+    //     ->name('workshop.upload');
 
 
 });
