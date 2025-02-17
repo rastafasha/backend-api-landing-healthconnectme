@@ -72,7 +72,7 @@ class registroLandingController extends Controller
         ]);
 
         // Mail::to($patient->email)->send(new NewPatientRegisterMail($patient));
-        Mail::to('registro@health-connect.me')->send(new NewWorkshopRegisterMail($rlanding));
+        Mail::to('mercadocreativo@gmail.com')->send(new NewWorkshopRegisterMail($rlanding));
 
         
         return response()->json([

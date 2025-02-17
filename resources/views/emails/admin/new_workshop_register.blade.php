@@ -5,9 +5,9 @@ Se has registrado un nuevo usuario para el registro app Health Connect
 <br><br>
 
 <br>
-* Nombre ***{{ $doctor->nombre}}*** ***{{ $doctor->apellido}}***
+* Nombre ***{{ $rlanding->nombre}}*** ***{{ $rlanding->apellido}}***
 <br>
-* Email ***{{ $doctor->email}}***
+* Email ***{{ $rlanding->email}}***
 
 <br><br>
 @component('mail::button', [

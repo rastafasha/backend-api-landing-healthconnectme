@@ -20,7 +20,9 @@ class CreateRegistrosLandingTable extends Migration
             $table->string('apellido');
             $table->string('email');
             $table->string('ciudad');
+            $table->string('pais');
             $table->string('phone');
+            $table->string('rrss')->nullable();
             $table->string('speciality');
             $table->string('address');
             $table->string('terminos');
@@ -29,7 +31,10 @@ class CreateRegistrosLandingTable extends Migration
             $table->string('dondeSeEntero');
             $table->string('image')->nullable();
             
-            $table->enum('status', [RegistroL::APPROVED, RegistroL::PENDING, RegistroL::REJECTED])->default(RegistroL::PENDING);
+            $table->enum('status', [RegistroL::APPROVED, RegistroL::PENDING, 
+            RegistroL::REJECTED, RegistroL::TESTING,
+            RegistroL::FREETIME
+            ])->default(RegistroL::PENDING);
             // Provider IDs
             $table->unsignedBigInteger('type_id')->nullable();
 

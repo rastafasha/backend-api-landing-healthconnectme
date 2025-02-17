@@ -14,9 +14,13 @@ class RegistroL extends Model
         'nombre',
         'apellido',
         'ciudad',
+        'pais',
         'phone',
+        'rrss',
+        'type_id',
         'speciality',
         'email',
+        'rrss',
         'facebook',
         'instagram',
         'dondeSeEntero',
@@ -28,11 +32,14 @@ class RegistroL extends Model
     const APPROVED = 'APPROVED';
     const PENDING = 'PENDING';
     const REJECTED = 'REJECTED';
+    const TESTING = 'TESTING';
+    const FREETIME = 'FREETIME';
     
     public static function statusTypes()
     {
         return [
-            self::APPROVED, self::PENDING, self::REJECTED
+            self::APPROVED, self::PENDING, self::REJECTED,
+            self::TESTING, self::FREETIME
         ];
     }
 

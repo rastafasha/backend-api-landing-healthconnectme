@@ -2,25 +2,25 @@
 
 namespace App\Mail;
 
-use App\Models\Workshop;
+use App\Models\RegistroL;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class NewWorkshopRegisterMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $workshop;
+    public $rlanding;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Workshop $workshop)
+    public function __construct(RegistroL $rlanding)
     {
-        $this->workshop = $workshop;
+        $this->rlanding = $rlanding;
     }
 
     /**
@@ -30,8 +30,8 @@ class NewWorkshopRegisterMail extends Mailable
      */
     public function build()
     {
-        return $this->from('registro@health-connect.me', 'Sistema de Registro desde Health-connect.me')
+        return $this->from('soporte@health-connect.me', 'Sistema de Registro desde Health-connect.me')
             ->subject('Registro de un nuevo usuario para Health-connect.me')
-            ->markdown('emails.admin.new_workshop_register' , ['workshop' => $this->workshop]);
+            ->markdown('emails.admin.new_workshop_register' , ['rlanding' => $this->rlanding]);
     }
 }
