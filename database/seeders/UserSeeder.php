@@ -2,12 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Role;
 use App\Models\User;
-use App\Models\Currency;
-use App\Models\Permission;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
