@@ -16,8 +16,6 @@ class RegistroL extends Model
         'ciudad',
         'pais',
         'phone',
-        'rrss',
-        'type_id',
         'speciality',
         'email',
         'rrss',
@@ -27,6 +25,9 @@ class RegistroL extends Model
         'address',
         'terminos',
         'status',
+        'rrss',
+        'type_id',
+        'pais_id',
     ];
 
     const APPROVED = 'APPROVED';

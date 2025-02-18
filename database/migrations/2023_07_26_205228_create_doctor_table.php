@@ -32,6 +32,7 @@ class CreateDoctorTable extends Migration
             $table->enum('status', [Doctor::APPROVED, Doctor::PENDING, Doctor::REJECTED])->default(Doctor::PENDING);
             // Provider IDs
             $table->unsignedBigInteger('type_id')->nullable();
+            $table->unsignedBigInteger('pais_id')->nullable();
 
             $table->timestamps();
 

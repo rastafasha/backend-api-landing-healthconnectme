@@ -20,7 +20,7 @@ class CreateRegistrosLandingTable extends Migration
             $table->string('apellido');
             $table->string('email');
             $table->string('ciudad');
-            $table->string('pais');
+            // $table->string('pais');
             $table->string('phone');
             $table->string('rrss')->nullable();
             $table->string('speciality');
@@ -37,6 +37,7 @@ class CreateRegistrosLandingTable extends Migration
             ])->default(RegistroL::PENDING);
             // Provider IDs
             $table->unsignedBigInteger('type_id')->nullable();
+            $table->unsignedBigInteger('pais_id')->nullable();
 
             $table->timestamps();
         });

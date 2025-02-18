@@ -15,14 +15,14 @@ class PaisController extends Controller
      */
     public function index()
     {
-        $countries = Country::orderBy('id', 'DESC')
+        $paises = Pais::orderBy('id', 'DESC')
         
         ->get();
 
         return response()->json([
             'code' => 200,
             'status' => 'Listar todos los paises',
-            'countries' => $countries,
+            'paises' => $paises,
         ], 200);
     }
 
@@ -47,10 +47,10 @@ class PaisController extends Controller
      */
     public function store(Request $request)
     {
-        $pais_is_valid = Country::where("user_id", $request->user_id)->first();
+        $pais_is_valid = Pais::where("user_id", $request->user_id)->first();
         $request->request->add(["ciudades"=>json_encode($request->ciudades)]);
 
-        $pais = Country::create($request->all());
+        $pais = Pais::create($request->all());
 
         return response()->json([
             "message"=>200,
@@ -65,7 +65,7 @@ class PaisController extends Controller
      */
     public function show($id)
     {
-        $pais = Country::findOrFail($id);
+        $pais = Pais::findOrFail($id);
 
         return response()->json([
             "pais" => $pais,
@@ -75,7 +75,7 @@ class PaisController extends Controller
     }
     public function showCode($code)
     {
-        $pais = Country::where("code",  $code)->first();
+        $pais = Pais::where("code",  $code)->first();
 
         if ($pais) {
             $ciudades = json_decode($pais->ciudades, true);
@@ -102,11 +102,11 @@ class PaisController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $pais_is_valid = Country::where("id", "<>", $id)->first();
+        $pais_is_valid = Pais::where("id", "<>", $id)->first();
 
         $request->request->add(["ciudades"=>json_encode($request->ciudades)]);
         
-        $pais = Country::findOrFail($id);
+        $pais = Pais::findOrFail($id);
 
         $pais->update($request->all());
         
@@ -127,7 +127,7 @@ class PaisController extends Controller
      */
     public function destroy($id)
     {
-        $pais = Country::findOrFail($id);
+        $pais = Pais::findOrFail($id);
         
         $pais->delete();
         return response()->json([
@@ -136,6 +136,6 @@ class PaisController extends Controller
     }
 
     public function search(Request $request){
-        return Country::search($request->buscar);
+        return Pais::search($request->buscar);
     }
 }

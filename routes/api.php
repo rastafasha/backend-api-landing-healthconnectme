@@ -55,6 +55,8 @@ Route::group(['middleware' => 'api'], function ($router) {
     require __DIR__ . '/api_routes/profile.php';
     // types
     require __DIR__ . '/api_routes/types.php';
+    // pais
+    require __DIR__ . '/api_routes/pais.php';
     
     //subcripcion
     require __DIR__ . '/api_routes/subcripcion.php';
