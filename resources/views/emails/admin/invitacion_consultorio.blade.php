@@ -171,10 +171,10 @@
 																															<td class="text-16" style="font-size:16px; line-height:20px; color:#6e6e6e; font-family:'PT Sans', Arial, sans-serif; text-align:left; min-width:auto !important;">
 																																<multiline>
 																																	
-																																<strong>Nombre y Apellido: </strong>
+																																{{-- <strong>Nombre y Apellido: </strong>
 																																	<br />
 																																	{{$workshop->name.' '.$workshop->surname}}
-																																	<br />
+																																	<br /> --}}
 																																	<strong>Email Registrado: </strong>
 																																	<br />
 																																	{{$workshop->email}}
