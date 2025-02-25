@@ -19,12 +19,12 @@ class CreateRegistrosLandingTable extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->string('email');
-            $table->string('ciudad');
+            $table->string('ciudad')->nullable();
             // $table->string('pais');
             $table->string('phone');
             $table->string('rrss')->nullable();
-            $table->string('speciality');
-            $table->string('address');
+            $table->string('speciality')->nullable();
+            $table->string('address')->nullable();
             $table->string('terminos');
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();
