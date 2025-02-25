@@ -7,9 +7,11 @@ use App\Models\RegistroL;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Mail\InvitacionClinicaMail;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NewWorkshopRegisterMail;
+use App\Mail\InvitacionConsultorioMail;
 
 class registroLandingController extends Controller
 {
@@ -241,6 +243,23 @@ class registroLandingController extends Controller
              ]
          ]);
      }
+
+     public function sendInvitation(Request $request, $id)
+    {
+        $workshop = RegistroL::findOrfail($id);
+        $workshop->type_id = $request->type_id;
+        $workshop->update();
+        if($request->type_id ===2){
+            //mail to 
+            Mail::to($workshop->email)->send(new InvitacionConsultorioMail($workshop));
+        }
+        if($request->type_id ===1){
+            Mail::to($workshop->email)->send(new InvitacionClinicaMail($workshop));
+        }
+
+        return $workshop;
+        
+    }
 
      public function search(Request $request){
         return RegistroL::search($request->buscar);

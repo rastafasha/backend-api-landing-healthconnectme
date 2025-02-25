@@ -19,6 +19,8 @@ Route::get('/registrol/show/{workshop}', [registroLandingController::class, 'reg
 
 Route::put('/registrol/update/{id}', [registroLandingController::class, 'registrolUpdate'])
     ->name('registrol.update');
+Route::put('/registrol/sendinvitation/{id}', [registroLandingController::class, 'sendInvitation'])
+    ->name('registrol.sendInvitation');
 
 Route::delete('/registrol/destroy/{registrol:id}', [registroLandingController::class, 'registrolDestroy'])
     ->name('registrol.destroy');
