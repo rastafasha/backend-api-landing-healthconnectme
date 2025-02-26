@@ -43,29 +43,7 @@ class registroLandingController extends Controller
     public function registrolStore(Request $request)
     {
        
-        // return RegistroL::create($request->all());
-
-
-        
-
-        // $patient_is_valid = Patient::where("n_doc", $request->n_doc)->first();
-
-        // if($patient_is_valid){
-        //     return response()->json([
-        //         "message"=>403,
-        //         "message_text"=> 'el paciente ya existe'
-        //     ]);
-        // }
-
-        // if($request->hasFile('imagen')){
-        //     $path = Storage::putFile("patients", $request->file('imagen'));
-        //     $request->request->add(["avatar"=>$path]);
-        // }
-
-        // if($request->birth_date){
-        //     $date_clean = preg_replace('/\(.*\)|[A-Z]{3}-\d{4}/', '',$request->birth_date );
-        //     $request->request->add(["birth_date" => Carbon::parse($date_clean)->format('Y-m-d h:i:s')]);
-        // }
+      
 
         $rlanding = RegistroL::create($request->all());
 

@@ -101,6 +101,11 @@ Route::group(['middleware' => 'api'], function ($router) {
     });
 
 
+    Route::get('/migrate-make', function () {
+        Artisan::call('make:migration agregar_campo_x');
+        return "Migrate:agregar campos a tablas";
+    });
+
 
 
     // Route::post('/workshop/store', [workshopController::class, 'workshopStore'])
