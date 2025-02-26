@@ -37,6 +37,6 @@ class NewWorkshopRegisterMail extends Mailable
 
         return $this
         ->subject('HealthConnectMeLanding: Nuevo Registro ')
-        ->view('emails.admin.new_workshop_register',['workshop' => $this->rlanding]);
+        ->view('emails.admin.new_workshop_register',['rlanding' => $this->rlanding]);
     }
 }
