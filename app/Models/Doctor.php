@@ -54,7 +54,7 @@ class Doctor extends Model
             //     $user
             // )->onQueue("high");
 
-        // Mail::to('registro@health-connect.me')->send(new NewWorkshopRegisterMail($doctor));
+        // Mail::to('registro@klyntic.com')->send(new NewWorkshopRegisterMail($doctor));
 
         });
 

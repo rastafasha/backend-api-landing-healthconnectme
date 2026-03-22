@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*', 'http://localhost:4200', 'https://admin.health-connect.me', 'https://health-connect.me/'],
+    'allowed_origins' => ['*', 'http://localhost:4200', 'https://admin.klyntic.com', 'https://klyntic.com/'],
 
     'allowed_origins_patterns' => ['*'],
 

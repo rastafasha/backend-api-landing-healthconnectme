@@ -1,7 +1,7 @@
 @component('mail::message')
 # Hola
 <br>
-Se has registrado un nuevo usuario para el registro app Health Connect
+Se has registrado un nuevo usuario para el registro app klyntic
 <br><br>
 
 <br>
@@ -142,7 +142,7 @@ Notificaciones automatizadas desde la app
 																	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																		<tr>
 																			<td class="img-center p-30 px-15" style="font-size:0pt; line-height:0pt; text-align:center; padding: 30px; padding-left: 15px; padding-right: 15px;">
-																				<a href="#" target="_blank"><img src="https://health-connect.me/varios/logoHealthConnect-01.png" width="150" height="100" editable="true" border="0" alt="" /></a>
+																				<a href="#" target="_blank"><img src="https://klyntic.com/varios/logoklyntic.png" width="150" height="100" editable="true" border="0" alt="" /></a>
 																			</td>
 																		</tr>
 																	</table>
@@ -216,8 +216,8 @@ Notificaciones automatizadas desde la app
 																																	<tr>
 																																		<td class="btn-16 c-white l-white" bgcolor="#f3189e" style="font-size:16px; line-height:20px; mso-padding-alt:15px 35px; font-family:'PT Sans', Arial, sans-serif; text-align:center; font-weight:bold; text-transform:uppercase; border-radius:25px; min-width:auto !important; color:#ffffff;">
 																																			<multiline>
-																																				<a href="https://admin.health-connect.me/" target="_blank" class="link c-white" style="display: block; padding: 15px 35px; text-decoration:none; color:#ffffff;">
-																																					<span class="link c-white" style="text-decoration:none; color:#ffffff;">Acceder a Admin Health Connect me</span>
+																																				<a href="https://admin.klyntic.com/" target="_blank" class="link c-white" style="display: block; padding: 15px 35px; text-decoration:none; color:#ffffff;">
+																																					<span class="link c-white" style="text-decoration:none; color:#ffffff;">Acceder a Admin klyntic</span>
 																																				</a>
 																																			</multiline>
 																																		</td>
@@ -257,7 +257,7 @@ Notificaciones automatizadas desde la app
                             																			<tr>
                             																				
                             																				<td class="img" width="117" style="font-size:0pt; line-height:0pt; text-align:center; ">
-                                                                                                                <a href="https://health-connect.me/" target="_blank"><img src="https://health-connect.me/varios/logoHealthConnect-01.png" width="75" height="50" editable="true" border="0" alt="" /></a>
+                                                                                                                <a href="https://klyntic.com/" target="_blank"><img src="https://klyntic.com/varios/logoklyntic.png" width="75" height="50" editable="true" border="0" alt="" /></a>
                             																					
                             																				</td>
                             																			</tr>

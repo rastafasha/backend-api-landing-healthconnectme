@@ -30,12 +30,9 @@ class InvitacionClinicaMail extends Mailable
      */
     public function build()
     {
-        // return $this->from('citasmedicas@malcolmcordova.com', 'Registro de una nueva cita desde Health Connect')
-        //     ->subject('Registro de una nueva cita')
-        //     ->markdown('emails.admin.new_workshop_register' , ['workshop' => $this->workshop]);
-
+        
             return $this
-            ->subject('HealthConnectMe: Invitacion Clínica')
+            ->subject('klyntic: Invitacion Clínica')
             ->view('emails.admin.invitacion_clinica',['workshop' => $this->workshop]);
         
     }
